@@ -51,6 +51,7 @@ public abstract class CollectibleBase : MonoBehaviour
         if (_collectParticles != null)
         {
             _collectParticles = Instantiate(_collectParticles, transform.position, Quaternion.identity);
+            Destroy(_collectParticles, 1f);
         }
 
         if (_collectSound != null)

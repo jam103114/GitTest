@@ -41,6 +41,7 @@ public class Enemy : MonoBehaviour
         if (_impactParticles != null)
         {
             _impactParticles = Instantiate(_impactParticles, transform.position, Quaternion.identity);
+            Destroy(_impactParticles, 1f);
         }
 
         if (_impactSound != null)
