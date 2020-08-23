@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
 
     BallMotor _ballMotor;
 
+    [SerializeField] float _treasureScore = 0;
+
     private void Awake()
     {
         _ballMotor = GetComponent<BallMotor>();
@@ -53,6 +55,12 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void IncreaseTreasure(int amount)
+    {
+        _treasureScore += amount;
+        //do stuff with UI
+        Debug.Log("Score: " + _treasureScore);
+    }
     public void Kill()
     {
         gameObject.SetActive(false);
