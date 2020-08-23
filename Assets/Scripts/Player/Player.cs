@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     private void Start()
     {
         _ballMotor = GetComponent<BallMotor>();
+        _currentHealth = _maxHealth;
     }
 
     private void FixedUpdate()
